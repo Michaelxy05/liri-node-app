@@ -7,7 +7,7 @@ https://drive.google.com/file/d/1JMMtD9C9XRy5inGEfQvhEVbzQAutv2oV/view?usp=shari
 
 To retrieve the data that will power this app, you'll need to send requests to the Bands in Town, Spotify and OMDB APIs. You'll find these Node packages crucial for your assignment.
 
-# NPM packages used
+## NPM packages used
 
    * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
 
@@ -17,7 +17,7 @@ To retrieve the data that will power this app, you'll need to send requests to t
 
    * [DotEnv](https://www.npmjs.com/package/dotenv)
    
-# Request to grab data from
+## Request to grab data(API) from:
    
    * [OMDB API](http://www.omdbapi.com)
    
