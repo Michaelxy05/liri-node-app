@@ -27,7 +27,7 @@ To retrieve the data that will power this app, you'll need to send requests to t
    
    **_Keep in mind you can only make one of the following commands at a time_**
 
-   * `concert-this` -- then followed by a band or single artist
+   * `concert-this` -- then followed by the name of a **band** *or a **single artist**
           
           * Name of the venue
 
@@ -35,7 +35,7 @@ To retrieve the data that will power this app, you'll need to send requests to t
 
           * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-   * `spotify-this-song` -- then followed by a title of a song
+   * `spotify-this-song` -- then followed by a **title** of a **song**
           
            * Artist(s)
 
@@ -45,7 +45,7 @@ To retrieve the data that will power this app, you'll need to send requests to t
 
            * The album that the song is from
 
-   * `movie-this` -- then followed by a title of a movie
+   * `movie-this` -- then followed by a **title** of a **movie**
    
            * Title of the movie.
            * Year the movie came out.
@@ -56,6 +56,6 @@ To retrieve the data that will power this app, you'll need to send requests to t
            * Plot of the movie.
            * Actors in the movie.
 
-   * `do-what-it-says` -- then followed by pressing enter
+   * `do-what-it-says` -- then followed by **pressing enter**
    
            * It should run `spotify-this-song` for "I Want it That Way"
