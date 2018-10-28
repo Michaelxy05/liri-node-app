@@ -28,9 +28,34 @@ To retrieve the data that will power this app, you'll need to send requests to t
    --Keep in mind you can only make one of the following commands at a time--
 
    * `concert-this` -- then followed by a band or single artist
+          
+          * Name of the venue
+
+          * Venue location
+
+          * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
    * `spotify-this-song` -- then followed by a title of a song
+          
+           * Artist(s)
+
+           * The song's name
+
+           * A preview link of the song from Spotify
+
+           * The album that the song is from
 
    * `movie-this` -- then followed by a title of a movie
+   
+           * Title of the movie.
+           * Year the movie came out.
+           * IMDB Rating of the movie.
+           * Rotten Tomatoes Rating of the movie.
+           * Country where the movie was produced.
+           * Language of the movie.
+           * Plot of the movie.
+           * Actors in the movie.
 
    * `do-what-it-says` -- then followed by pressing enter
+   
+           * It should run `spotify-this-song` for "I Want it That Way"
