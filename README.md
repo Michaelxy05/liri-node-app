@@ -27,7 +27,7 @@ To retrieve the data that will power this app, you'll need to send requests to t
    
    **_Keep in mind you can only make one of the following commands at a time_**
 
-   * `concert-this` -- then followed by the name of a **band** *or a **single artist**
+   * `concert-this` -- then followed by the name of a **band** or a **single artist**
           
           * Name of the venue
 
