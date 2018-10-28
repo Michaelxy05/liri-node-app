@@ -23,9 +23,9 @@ To retrieve the data that will power this app, you'll need to send requests to t
    
    * [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
    
-   To use this project, using Bash, Powershell, etc... first type in 'node liri.js' followed by the following commands:
+## To use this project, using Bash, Powershell, etc... first type in 'node liri.js' followed by the following commands:
    
-   --Keep in mind you can only make one of the following commands at a time--
+   **_Keep in mind you can only make one of the following commands at a time_**
 
    * `concert-this` -- then followed by a band or single artist
           
