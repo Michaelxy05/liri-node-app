@@ -23,6 +23,7 @@ var moment = require("moment");
 
 // Create the LIRI constructor
 var LIRI = function () {
+
     // divider will be used as a spacer between the LIRI data we print in log.txt
     var divider =
         "\n------------------------------------------------------------\n\n";
@@ -50,7 +51,7 @@ var LIRI = function () {
             var jsonData = JSON.parse(body)[0];
 
             // showData ends up being the string containing the show data we will print to the console
-            var showData = [
+            var artistData = [
                 divider,
                 //      * Name of the venue
                 "Name of the venue: " + jsonData.venue.name,
@@ -63,10 +64,12 @@ var LIRI = function () {
                 divider
             ].join("\n\n");
 
+            //console.log(artistData);
+            
             // Append showData and the divider to log.txt, print showData to the console
-            fs.appendFile("log.txt", showData + divider, function (err) {
+            fs.appendFile("log.txt", artistData + divider, function (err) {
                 if (err) throw err;
-                console.log(showData);
+                console.log(artistData);
             });
 
         });
@@ -92,9 +95,9 @@ var LIRI = function () {
             }
 
             var songInfo = data.tracks.items;
-
+            //console.log(songInfo);
             // showData ends up being the string containing the show data we will print to the console
-            var showData = [
+            var songData = [
 
                 divider,
 
@@ -112,10 +115,13 @@ var LIRI = function () {
 
                 divider
             ].join("\n\n");
+
+            //console.log(songData);
+
             // Append showData and the divider to log.txt, print showData to the console
-            fs.appendFile("log.txt", showData + divider, function (err) {
+            fs.appendFile("log.txt", songData + divider, function (err) {
                 if (err) throw err;
-                console.log(showData);
+                console.log(songData);
 
             });
         })
@@ -142,7 +148,7 @@ var LIRI = function () {
             var jsonData = JSON.parse(body);
 
             // showData ends up being the string containing the show data we will print to the console
-            var showData = [
+            var movieData = [
                 //    * This will output the following information to your terminal/bash window:
                 divider,
                 //        * Title of the movie.
@@ -171,17 +177,19 @@ var LIRI = function () {
                 divider
             ].join("\n\n");
 
+            //console.log(movieData);
+
             // Append showData and the divider to log.txt, print showData to the console
-            fs.appendFile("log.txt", showData + divider, function (err) {
+            fs.appendFile("log.txt", movieData + divider, function (err) {
                 if (err) throw err;
-                console.log(showData);
+                console.log(movieData);
             });
         });
     };
 
 
-    //===========================================.fs.random.txt===========
-    //=======.fs.random.txt===============================================
+    //===.fs.random.txt====================.fs.random.txt=================
+    //=======.fs.random.txt===============================.fs.random.txt==
 
     // `node liri.js do-what-it-says`
     this.doThis = function () {
@@ -190,26 +198,33 @@ var LIRI = function () {
             //console.log(data);
 
             var dataArr = data.split(",");
-
+            //console.log(dataArr);
             // Each command is represented. Because of the format in the txt file, remove the quotes to run these commands. 
             if (dataArr[0] === "spotify-this-song") {
-                var songcheck = dataArr[1].slice(1, -1);
-                //console.log(songcheck);
-                spotify(songcheck);
+                var playThisSong = dataArr[1].slice(1, -1);
+                //console.log(playThisSong);
+                //spotify(playThisSong);
+
+                // It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
+                fs.appendFile("log.txt", "`spotify-this-song` " + playThisSong + divider, function (err) {
+                    if (err) throw err;
+                    console.log(playThisSong);
+                });
 
             }
 
-        })
-
-        //    * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-
-        //      * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-
-        //      * Edit the text in random.txt to test out the feature for movie-this and concert-this.
+        });
 
     }
 
-}; //<=============!!!IMPORTANT!!!! LIRI(); ENDS HERE====XXXXXXXXXXXXX
+    //    * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+
+    //      * Edit the text in random.txt to test out the feature for movie-this and concert-this.
+
+
+    //<--------xxxxxxxxxxxxxx======!!!IMPORTANT!!!!========////////////////    
+}; //<-----========!!!IMPORTANT!!!! LIRI(); ENDS HERE====XXXXXXXXXX<<<===
+//<--------xxxxxxxxxxxxxx======!!!IMPORTANT!!!!========\\\\\\\\\\\\\\\\
 
 //=======================================Keyword Commands=============
 //=======Keyword Commands=============================================
@@ -271,4 +286,5 @@ else {
     liri.doThis(term);
     console.log(divider);
     console.log("Doing what I'm programmed to do now......");
+    //liri.spotify(playThisSong);
 };
