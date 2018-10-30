@@ -266,6 +266,7 @@ if (!term) {
 //=====* `concert-this`==========
 if (search === "concert-this") {
     console.log(divider);
+    console.log("mXiongDesign © 2018 | Built with ♥");
     console.log("Searching for the earliest concert......");
     liri.findArtist(term);
 }
@@ -273,18 +274,21 @@ if (search === "concert-this") {
 else if (search === "spotify-this-song") {
     liri.spotify(term);
     console.log(divider);
+    console.log("mXiongDesign © 2018 | Built with ♥");
     console.log("Searching for Song......");
 }
 //=====* `movie-this`============
 else if (search === "movie-this") {
     liri.findMovie(term);
     console.log(divider);
+    console.log("mXiongDesign © 2018 | Built with ♥");
     console.log("Searching for Movie......");
 }
 //=====* `do-what-it-says`=======  
 else {
     liri.doThis(term);
     console.log(divider);
+    console.log("mXiongDesign © 2018 | Built with ♥");
     console.log("Doing what I'm programmed to do now......");
     //liri.spotify(playThisSong);
 };
