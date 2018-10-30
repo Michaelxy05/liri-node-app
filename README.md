@@ -5,8 +5,6 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 You can view a glimpse of my project here:
 https://drive.google.com/file/d/1JMMtD9C9XRy5inGEfQvhEVbzQAutv2oV/view?usp=sharing
 
-To retrieve the data that will power this app, you'll need to send requests to the Bands in Town, Spotify and OMDB APIs. You'll find these Node packages crucial for your assignment.
-
 ## NPM packages used
 
    * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
@@ -23,7 +21,7 @@ To retrieve the data that will power this app, you'll need to send requests to t
    
    * [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
    
-### To use this project, using Bash, Powershell, etc... first type in 'node liri.js' followed by the following commands:
+### To use this project, using Bash, Powershell, VS Code Terminal, etc... first type in 'node liri.js' followed by the following commands:
    
    **_Keep in mind you can only make one of the following commands at a time_**
 
@@ -48,12 +46,19 @@ To retrieve the data that will power this app, you'll need to send requests to t
    * `movie-this` -- then followed by a **title** of a **movie**
    
            * Title of the movie.
+           
            * Year the movie came out.
+           
            * IMDB Rating of the movie.
+           
            * Rotten Tomatoes Rating of the movie.
+           
            * Country where the movie was produced.
+           
            * Language of the movie.
+           
            * Plot of the movie.
+           
            * Actors in the movie.
 
    * `do-what-it-says` -- then followed by **pressing enter**
